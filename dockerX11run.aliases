@@ -1,0 +1,1 @@
+dockerX11run='docker run -ti --rm --privileged=true -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=$DISPLAY --net host '
