@@ -13,8 +13,8 @@ RUN mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
     echo "developer:x:1000:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
-    chmod 0440 /etc/sudoers.d/developer && \
-RUN    echo "alias ll='ls -ail --color=auto' " >> /home/developer/.bashrc
+    chmod 0440 /etc/sudoers.d/developer  
+RUN    echo "alias ll='ls -ail --color=auto' " >> /home/developer/.bashrc && \
     chown developer:developer -R /home/developer
 
 USER developer
