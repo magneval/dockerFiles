@@ -2,7 +2,7 @@ FROM magneval/jre8
 
 MAINTAINER magneval
 
-ENV HTTP_PROXY http://172.17.0.1:3128/
+#ENV HTTP_PROXY http://172.17.0.1:3128/
 
 RUN apt-get install -y git
 RUN apt-get install -y asciidoctor asciidoc graphviz
