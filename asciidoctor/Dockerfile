@@ -1,26 +1,22 @@
-FROM magneval/rpi-raspbian
+FROM magneval/jre8
 
-ENV HTTP_PROXY http://172.17.42.1:3128/
+MAINTAINER magneval
 
-#RUN apt-get update
-#RUN apt-get upgrade
-RUN apt-get install -y apt-utils asciidoctor asciidoc
+ENV HTTP_PROXY http://172.17.0.1:3128/
 
-RUN apt-get install -y openjdk-8-jre graphviz
+RUN apt-get install -y git
+RUN apt-get install -y asciidoctor asciidoc graphviz
 
 RUN    mkdir -p /home/developer
 RUN    mkdir -p /etc/sudoers.d/
-RUN    echo "developer:x:1001:1001:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd
-RUN    echo "developer:x:1001:" >> /etc/group
+RUN    echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd
+RUN    echo "developer:x:1000:" >> /etc/group
 RUN    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer
 RUN    chmod 0440 /etc/sudoers.d/developer
+RUN    echo "alias ll='ls -ail --color=auto' " >> /home/developer/.bashrc
 RUN    chown developer:developer -R /home/developer
 RUN    gem install asciidoctor tilt thread_safe
 RUN    gem install slim --version 2.1.0
-#RUN apt-get update
-#RUN apt-get upgrade -y
-RUN apt-get install -y git
-#RUN    git clone git://github.com/asciidoctor/asciidoctor-reveal.js.git
 
 RUN gem install asciidoctor-diagram
 
