@@ -3,7 +3,7 @@ FROM magneval/debian
 
 MAINTAINER magneval
 
-ENV HTTP_PROXY http://172.17.0.1:3128/
+#ENV HTTP_PROXY http://172.17.0.1:3128/
 
 RUN echo "deb http://httpredir.debian.org/debian jessie-backports main" | tee /etc/apt/sources.list.d/jessie-backports.list
 
