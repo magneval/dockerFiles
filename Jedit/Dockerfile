@@ -2,7 +2,7 @@ FROM magneval/openjdk8
 
 MAINTAINER magneval
 
-ENV HTTP_PROXY http://172.17.0.1:3128/
+#ENV HTTP_PROXY http://172.17.0.1:3128/
 
 RUN apt-get install -y software-properties-common libxext-dev libxrender-dev libxtst-dev xterm
 RUN apt-get install -y jedit
