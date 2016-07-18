@@ -55,3 +55,32 @@ docker build -t magneval/openjdk8 OpenJDK8
 docker build -t magneval/pxe-master docker/pxe-master/
 docker build -t magneval/squid-deb-proxy ~/docker/squid-deb-proxy/
 docker build -t magneval/squid ~/docker/squid
+docker build            -e DISPLAY=$DISPLAY            -v /tmp/.X11-unix:/tmp/.X11-unix            -v `pwd`/.netbeans-docker:/home/developer/.netbeans            -v `pwd`:/workspace Ne
+docker build guacamole
+docker build OpenJDK8 -t magneval/openjdk8
+docker build ros
+docker build rosu
+docker build ros-viz/
+docker build scratch
+docker build -t firefox ~/docker/firefox
+docker build -t magneval/asciidoctor ~/docker/asciidoctor/
+docker build -t magneval/asciidoctor ~/Projets/rasperryDocker/asciidoctor
+docker build -t magneval/asciidoctor ~/Projets/rasperryDocker/asciidoctor
+docker build -t magneval/asciidoctor ~/Projets/rasperryDocker/asciidoctor
+docker build -t magneval/generator-gulp-angular ~/Projets/rasperryDocker/generator-gulp-angular/
+docker build -t magneval/generator-gulp-angular ~/Projets/rasperryDocker/micro_httpd/
+docker build -t magneval/generator-gulp-angular ~/Projets/rasperryDocker/micro_httpd/micro_httpd
+docker build -t magneval/goland docker/goland/
+docker build -t magneval/jedit ~/docker/Jedit/
+docker build -t magneval/ltsp-server ~/docker/ltsp
+docker build -t magneval/maven-java8 ~/docker/MavenJava8/
+docker build -t magneval/micro_httpd ~/Projets/rasperryDocker/micro_httpd/
+docker build -t magneval/netbeans docker/docker-netbeans-master
+docker build -t magneval/netbeans:v8.0.1 docker/docker-netbeans-master
+docker build -t magneval/netbeans:v8.1  NetBeans
+docker build -t magneval/node.js ~/Projets/rasperryDocker/nodeJs/
+docker build -t magneval/openjdk8 OpenJDK8
+docker build -t magneval/pxe-master docker/pxe-master/
+docker build -t magneval/squid-deb-proxy ~/docker/squid-deb-proxy/
+docker build -t magneval/squid ~/docker/squid
+docker build -t xterm ~/docker/xterm
